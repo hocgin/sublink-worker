@@ -250,8 +250,8 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
         rules.push({ domain_suffix: ["googleapis.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["apple-retry.apple.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
 
-        rules.push({ domain_suffix: ["sellercentral.amazon.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'Fall Back' })
-        rules.push({ domain_suffix: ["amazon.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'Fall Back' })
+        rules.push({ domain_suffix: ["sellercentral.amazon.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'DIRECT' })
+        rules.push({ domain_suffix: ["amazon.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'DIRECT' })
 
         ruleResults.push("DOMAIN-SUFFIX,mumu.nie.netease.com,REJECT")
         
