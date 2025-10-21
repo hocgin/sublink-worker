@@ -228,7 +228,32 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
 
     formatConfig() {
         const rules = this.generateRules();
+
+
         const ruleResults = [];
+
+        /// t('outboundNames.Location:CN')
+        /// t('outboundNames.AI Services')
+        /// t('outboundNames.Fall Back')
+
+
+        rules.push({ domain_suffix: "aistudio.google.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "openai.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "chatgpt.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "claudeusercontent.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "forefront.ai", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "claude.ai", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "anthropic.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "ai.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "bard.google.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "generativelanguage.googleapis.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "googleapis.com", outbound: 'AI Services' })
+        rules.push({ domain_suffix: "apple-retry.apple.com", outbound: 'AI Services' })
+
+        rules.push({ domain_suffix: "sellercentral.amazon.com", outbound: 'Fall Back' })
+        rules.push({ domain_suffix: "amazon.com", outbound: 'Fall Back' })
+
+        ruleResults.push("DOMAIN-SUFFIX,mumu.nie.netease.com,REJECT")
         
         // 获取.mrs规则集配置
         const { site_rule_providers, ip_rule_providers } = generateClashRuleSets(this.selectedRules, this.customRules);
