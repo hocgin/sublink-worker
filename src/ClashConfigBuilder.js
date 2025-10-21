@@ -237,6 +237,7 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
         /// t('outboundNames.Fall Back')
 
 
+        /// AI 服务规则
         rules.push({ domain_suffix: ["aistudio.google.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["openai.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["chatgpt.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
@@ -250,9 +251,11 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
         rules.push({ domain_suffix: ["googleapis.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["apple-retry.apple.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
 
+        /// 直连规则
         rules.push({ domain_suffix: ["sellercentral.amazon.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'DIRECT' })
         rules.push({ domain_suffix: ["amazon.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'DIRECT' })
 
+        /// 禁止访问规则
         ruleResults.push("DOMAIN-SUFFIX,mumu.nie.netease.com,REJECT")
         
         // 获取.mrs规则集配置
