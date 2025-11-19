@@ -247,6 +247,7 @@ export class ClashConfigBuilder extends BaseConfigBuilder {
         rules.push({ domain_suffix: ["anthropic.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["ai.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["bard.google.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
+        rules.push({ domain_suffix: ["antigravity.google"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["generativelanguage.googleapis.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["googleapis.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
         rules.push({ domain_suffix: ["apple-retry.apple.com"], domain_keyword: [], site_rules: [], ip_rules: [], outbound: 'AI Services' })
